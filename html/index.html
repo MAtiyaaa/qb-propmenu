@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BonePed Menu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="lib/select2.min.css" rel="stylesheet" /> 
+    <script src="lib/select2.min.js"></script>
+    <script src="propnames.js"></script>
+    <script src="bonenames.js"></script>
+</head>
+<body>
+    <div id="menu">
+        <h2>PROP PED MENU</h2>
+        
+        <label for="propSelect">Prop Name:</label>
+        <select id="propSelect"></select>
+        <br><br>
+        <label for="boneSelect">Bone ID:</label>
+        <select id="boneSelect"></select>
+
+        <div class="coordinate-control">
+            <label for="positionX">Offset X:</label>
+            <button onclick="adjustCoordinate('positionX', -0.1)">-</button>
+            <input type="number" id="positionX" value="0" step="0.1">
+            <button onclick="adjustCoordinate('positionX', 0.1)">+</button>
+        </div>
+
+        <div class="coordinate-control">
+            <label for="positionY">Offset Y:</label>
+            <button onclick="adjustCoordinate('positionY', -0.1)">-</button>
+            <input type="number" id="positionY" value="0" step="0.1">
+            <button onclick="adjustCoordinate('positionY', 0.1)">+</button>
+        </div>
+
+        <div class="coordinate-control">
+            <label for="positionZ">Offset Z:</label>
+            <button onclick="adjustCoordinate('positionZ', -0.1)">-</button>
+            <input type="number" id="positionZ" value="0" step="0.1">
+            <button onclick="adjustCoordinate('positionZ', 0.1)">+</button>
+        </div>
+
+        <div class="coordinate-control">
+            <label for="rotationX">Rotation X:</label>
+            <button onclick="adjustCoordinate('rotationX', -1.0)">-</button>
+            <input type="number" id="rotationX" value="0" step="1.0">
+            <button onclick="adjustCoordinate('rotationX', 1.0)">+</button>
+        </div>
+
+        <div class="coordinate-control">
+            <label for="rotationY">Rotation Y:</label>
+            <button onclick="adjustCoordinate('rotationY', -1.0)">-</button>
+            <input type="number" id="rotationY" value="0" step="1.0">
+            <button onclick="adjustCoordinate('rotationY', 1.0)">+</button>
+        </div>
+
+        <div class="coordinate-control">
+            <label for="rotationZ">Rotation Z:</label>
+            <button onclick="adjustCoordinate('rotationZ', -1.0)">-</button>
+            <input type="number" id="rotationZ" value="0" step="1.0">
+            <button onclick="adjustCoordinate('rotationZ', 1.0)">+</button>
+        </div>
+
+        <button id="spawnPropButton">Spawn Prop</button>
+        <button id="closeMenuButton">Close Menu</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
